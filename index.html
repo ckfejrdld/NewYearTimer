@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Timer</title>
+  </head>
+  <body>
+    <center><h1 id="t"></h1></center>
+  </body>
+  <script>
+  setInterval(function(){
+  document.getElementById("t").innerHTML="2024년 까지 "+((1704034800000-new Date().getTime())/1000).toFixed(3)+"초 남음"
+  },0)
+  </script>
+</html>
