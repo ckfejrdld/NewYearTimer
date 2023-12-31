@@ -8,8 +8,11 @@
     <center><h1 id="t"></h1></center>
   </body>
   <script>
-  setInterval(function(){
-  document.getElementById("t").innerHTML="2024년 까지 "+((1704034800000-new Date().getTime())/1000).toFixed(3)+"초 남음"
-  },0)
+    setInterval(function(){
+      var remainingTimeInSeconds = (1704034800000 - new Date().getTime()) / 1000;
+      var minutes = Math.floor(remainingTimeInSeconds / 60);
+      var seconds = (remainingTimeInSeconds % 60).toFixed(3);
+      document.getElementById("t").innerHTML = "2024년 까지 " + minutes + "분 " + seconds + "초 남음";
+    }, 0);
   </script>
 </html>
