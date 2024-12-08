@@ -16,8 +16,8 @@
         document.getElementById("t").innerHTML = "이미 2025년입니다.";
       } else {
         var remainingTimeInSeconds = (targetTimestamp - currentTime) / 1000;
-        var days = (Math.floor(remainingTimeInSeconds / 86400) % 86400);
-        var hours = (Math.floor(remainingTimeInSeconds / 3600) % 3600);
+        var days = (Math.floor(remainingTimeInSeconds / 86400) % 3600);
+        var hours = (Math.floor(remainingTimeInSeconds / 3600) % 60);
         var minutes = (Math.floor(remainingTimeInSeconds / 60) % 60);
         var seconds = (remainingTimeInSeconds % 60).toFixed(3);
         document.getElementById("t").innerHTML = "2025년까지 " + days + "일 " + hours + "시간 " + minutes + "분 " + seconds + "초 남음";
