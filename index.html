@@ -9,7 +9,7 @@
   </body>
   <script>
     setInterval(function(){
-      var targetTimestamp = 173565720000;
+      var targetTimestamp = 1735657200000;
       var currentTime = new Date().getTime();
       
       if (currentTime >= targetTimestamp) {
@@ -18,7 +18,7 @@
         var remainingTimeInSeconds = (targetTimestamp - currentTime) / 1000;
         var minutes = Math.floor(remainingTimeInSeconds / 60);
         var seconds = (remainingTimeInSeconds % 60).toFixed(3);
-        document.getElementById("t").innerHTML = "2024년까지 " + minutes + "분 " + seconds + "초 남음";
+        document.getElementById("t").innerHTML = "2025년까지 " + minutes + "분 " + seconds + "초 남음";
       }
     }, 0);
   </script>
