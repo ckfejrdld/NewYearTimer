@@ -17,7 +17,7 @@
       } else {
         var remainingTimeInSeconds = (targetTimestamp - currentTime) / 1000;
         var hours = Math.floor(remainingTimeInSeconds / 3600);
-        var minutes = (Math.floor(remainingTimeInSeconds / 60) % 60).toFixed(3);
+        var minutes = (Math.floor(remainingTimeInSeconds / 60) % 60).toFixed(0);
         var seconds = (remainingTimeInSeconds % 60).toFixed(3);
         document.getElementById("t").innerHTML = "2025년까지 " + hours + "시간 " + minutes + "분 " + seconds + "초 남음";
       }
