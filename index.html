@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<! DOCTYPE html>
 <html lang="">
   <head>
     <meta charset="utf-8">
     <title>Timer</title>
   </head>
   <body>
-    <center><h1 id="t"></h1></center>
+    <center>
+      <h1 id="t"></h1>
+      <div id="link"></div>
+    </center>
   </body>
   <script>
     setInterval(function(){
@@ -14,15 +17,15 @@
       
       if (currentTime >= targetTimestamp) {
         document.getElementById("t").innerHTML = "이미 2026년입니다.";
+        document.getElementById("link").innerHTML = '<a href="https://console.alcl.cloud/happynewyear" target="_blank">Happy New Year!  🎉</a>';
       } else {
         var remainingTimeInSeconds = (targetTimestamp - currentTime) / 1000;
         var hours = Math.floor(remainingTimeInSeconds / 3600);
         var minutes = (Math.floor(remainingTimeInSeconds / 60) % 60);
         var seconds = (remainingTimeInSeconds % 60).toFixed(3);
         document.getElementById("t").innerHTML = "2026년까지 " + hours + "시간 " + minutes + "분 " + seconds + "초 남음";
+        document.getElementById("link").innerHTML = '';
       }
     }, 0);
   </script>
 </html>
-
-
